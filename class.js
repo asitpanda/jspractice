@@ -22,3 +22,10 @@ setTimeout(c1.display,0)
 
 //O/P = undefined undefined
 //Above coded if we remove settimeout then out put will be city honda
+
+function Bar(){}
+Bar.prototype = String.prototype;
+var b1 = new Bar();
+console.log(b1.hasOwnProperty('endsWith'));
+console.log(b1 instanceof String)
+//o/p = false, true
