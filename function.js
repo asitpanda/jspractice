@@ -22,3 +22,12 @@ foo.call({id:10})
 
 //O/P =  undefined
 
+function foo(){
+  return Array.prototype.slice.call(arguments);
+}
+
+console.log(foo(10,20,30));
+var bar = foo.bind(null,40);
+console.log(bar(10,20,30))
+//o/p = [10, 20, 30]
+// [40, 10, 20, 30]
