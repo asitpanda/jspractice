@@ -21,5 +21,35 @@ Q2 - (function(){
 };
 myObject.func();
 
+Q4 : function foo1()
+{
+  return {
+      bar: "hello"
+  };
+}
+
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+}
+console.log("foo1 returns:");
+console.log(foo1());
+console.log("foo2 returns:");
+console.log(foo2());
+
+Q5: (function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+
+
+
+
+
 https://www.toptal.com/javascript/interview-questions
 https://www.codeproject.com/Articles/1169073/Angular-Interview-Questions
