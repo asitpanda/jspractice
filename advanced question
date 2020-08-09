@@ -71,6 +71,8 @@ console.log(emp1.company);
 
 console.log(output);
 
+Q9: isInteger(x) that determines if x is an integer.
+
 
 https://www.toptal.com/javascript/interview-questions
 https://www.codeproject.com/Articles/1169073/Angular-Interview-Questions
