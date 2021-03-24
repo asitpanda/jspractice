@@ -61,6 +61,7 @@ Q7: var output = (function(x) {
   delete x;
   return x;
 })(0);
+console.log(output);
 
 Q8: var Employee = {
   company: 'xyz'
@@ -68,8 +69,6 @@ Q8: var Employee = {
 var emp1 = Object.create(Employee);
 delete emp1.company
 console.log(emp1.company);
-
-console.log(output);
 
 Q9: isInteger(x) that determines if x is an integer.
 
