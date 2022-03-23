@@ -114,6 +114,21 @@ function show(text,timeout){
 promiseAll([show('Asit',2000),Promise.reect('hi')]).then((result)=>{console.log(result)})
 promiseAll([show('Asit',2000),Promise.resolve('hi')]).then((result)=>{console.log(result)})
 
+Q12: Implement debounce function 
+function debounce(callback,time){
+let timer;
+	return (...args) => {
+  	console.log(time);
+  	clearTimeout(timer);
+    timer = setTimeout(()=> {callback(...args)},time)
+  }
+}
+
+const make = debounce((evnt)=>{
+    console.log('inside');
+    },1000);
+<input type="text" onkeypress="make(this)">
+
 
 https://www.toptal.com/javascript/interview-questions
 https://www.codeproject.com/Articles/1169073/Angular-Interview-Questions
