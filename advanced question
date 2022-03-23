@@ -72,6 +72,19 @@ console.log(emp1.company);
 
 Q9: isInteger(x) that determines if x is an integer.
 
+Q10: Write compose function which takes arguments of required functions and return result of all
+function add(a){return a+2;}
+function substract(a){return a-1;}
+function multiply(a){return 5*a;}
+const mine = compose(add,substract,multiply);
+mine(2);
+const compose = function(...functions){
+    return (args) => {
+        return functions.reduceRight((arg,fn)=>fn(arg),args);
+    }
+}
+
+
 
 https://www.toptal.com/javascript/interview-questions
 https://www.codeproject.com/Articles/1169073/Angular-Interview-Questions
