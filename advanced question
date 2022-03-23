@@ -84,6 +84,35 @@ const compose = function(...functions){
     }
 }
 
+Q11: Write promiseall method
+function promiseAll(promises){
+   return new Promise((resolve, reject) => {
+       let results = [];
+       let completed = 0;
+       
+       promises
+           .forEach((value, index) => {
+            Promise.resolve(value).then(result => {
+                results[index] = result;
+                completed += 1;
+                
+                if (completed == promises.length) {
+                    resolve(results);
+                }
+            }).catch(err => reject(err));
+       });
+    });
+}
+
+function show(text,timeout){
+ retun new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+        resolve(text)
+        },time)
+ });
+}
+promiseAll([show('Asit',2000),Promise.reect('hi')]).then((result)=>{console.log(result)})
+promiseAll([show('Asit',2000),Promise.resolve('hi')]).then((result)=>{console.log(result)})
 
 
 https://www.toptal.com/javascript/interview-questions
